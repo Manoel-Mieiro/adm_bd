@@ -1,0 +1,1 @@
+docker stop images-pgadmin-compose-1 images-postgres-compose-1
