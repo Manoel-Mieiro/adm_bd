@@ -26,7 +26,6 @@ CREATE TABLE public.solicitacao (
 	data_prazo timestamp NULL,
 	ano varchar NOT NULL,
 	deleted_at timestamp NULL,
-	subtipo int4 NULL,
 	subtipo_service_id int4 NULL,
 	situacao_tual varchar(100) NULL,
 	CONSTRAINT solicitacao_pkey PRIMARY KEY (id),
@@ -54,5 +53,4 @@ CREATE TABLE historico_solicitacao (
 ALTER TABLE historico_solicitacao ADD CONSTRAINT fk_historico_pedido1 FOREIGN KEY (solicitacao_id) REFERENCES solicitacao(id);
 ALTER TABLE historico_solicitacao ADD CONSTRAINT fk_historico_status_pedido1 FOREIGN KEY (situacao_solicitacao_id) REFERENCES situacao_solicitacao(id);
 ALTER TABLE subtipo_servico ADD CONSTRAINT fk_subtipo_servico_tipo_servico1 FOREIGN KEY (tipo_servico_id) REFERENCES tipo_servico(id);
-ALTER TABLE solicitacao ADD CONSTRAINT solicitacao_subtipo_fkey FOREIGN KEY (subtipo) REFERENCES subtipo_servico(id);
 ALTER TABLE solicitacao ADD CONSTRAINT solicitacao_subtipo_service_id_fkey FOREIGN KEY (subtipo_service_id) REFERENCES subtipo_servico(id);

@@ -23,10 +23,10 @@ INSERT INTO situacao_solicitacao (nome, codigo) VALUES
 ('Concluída', 'CON');
 
 -- Inserindo dados na tabela solicitacao
-INSERT INTO solicitacao (protocolo, created_at, data_criacao, data_prazo, ano, subtipo, subtipo_service_id) VALUES
-('2024-0001', CURRENT_TIMESTAMP, '2024-03-17 10:00:00', NULL, '2024', 1, NULL),
-('2024-0002', CURRENT_TIMESTAMP, '2024-03-17 11:30:00', NULL, '2024', NULL, 2),
-('2024-0003', CURRENT_TIMESTAMP, '2024-03-17 13:15:00', NULL, '2024', 3, NULL);
+INSERT INTO solicitacao (protocolo, created_at, data_criacao, data_prazo, ano, subtipo_service_id) VALUES
+('2024-0001', CURRENT_TIMESTAMP, '2024-03-17 10:00:00', NULL, '2024', 1),
+('2024-0002', CURRENT_TIMESTAMP, '2024-03-17 11:30:00', NULL, '2024', 2),
+('2024-0003', CURRENT_TIMESTAMP, '2024-03-17 13:15:00', NULL, '2024', 3);
 
 -- Inserindo dados na tabela historico_solicitacao
 INSERT INTO historico_solicitacao (situacao_solicitacao_id, observacao, solicitacao_id, data, endereco) VALUES
